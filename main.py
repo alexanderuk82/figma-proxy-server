@@ -14,7 +14,7 @@ app = FastAPI()
 # Configurar CORS para producción
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://www.figma.com"],  # Solo permitir Figma en producción
+    allow_origins=["https://www.figma.com", "https://figma.com", "null"],  # Permitir Figma y origen null para desarrollo
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
